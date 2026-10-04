@@ -1,0 +1,14 @@
+# 每行一个主题的 GitHub 仓库地址。收录要求见 README。
+https://github.com/monitor-probe/monitor-theme-default
+https://github.com/monitor-probe/monitor-theme-serverstatus
+https://github.com/Gongsc/Theme-Glassmorphism
+https://github.com/dongbo501/minimalist-probe-doraemon-theme
+https://github.com/binaryu/monitor-theme-emerald
+https://github.com/8bitNull/monitor-theme-hex
+https://github.com/akanotanin/monitor-theme-jikasei
+https://github.com/akanotanin/monitor-theme-naive
+https://github.com/akanotanin/monitor-theme-1999
+https://github.com/akanotanin/monitor-theme-rakugaki
+https://github.com/freetodo/monitor-theme-liquid-glass
+https://github.com/3922510-creator/monitor-theme-nebula
+https://github.com/tom2almighty/monitor-theme-design

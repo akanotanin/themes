@@ -1,0 +1,32 @@
+name: check
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+# A new push supersedes any run still in progress for the same pull request.
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Installs every listed theme into the latest hub, as deploy.yml does. Only an
+  # entry this pull request adds can fail it; problems with themes already
+  # listed are reported in the summary.
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - run: git fetch --depth=1 origin "$GITHUB_BASE_REF" && git show FETCH_HEAD:themes.txt > "$RUNNER_TEMP/base.txt"
+      - run: gh release download -R monitor-probe/monitor -p monitor-hub-x86_64-unknown-linux-musl -D "$RUNNER_TEMP" && chmod +x "$RUNNER_TEMP/monitor-hub-x86_64-unknown-linux-musl"
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - run: node scripts/build.mjs "$RUNNER_TEMP/monitor-hub-x86_64-unknown-linux-musl" --base "$RUNNER_TEMP/base.txt"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
