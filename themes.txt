@@ -14,3 +14,4 @@ https://github.com/3922510-creator/monitor-theme-nebula
 https://github.com/tom2almighty/monitor-theme-design
 https://github.com/WAOR/Monitor-SAO
 https://github.com/akanotanin/monitor-theme-commander
+https://github.com/kure29/Monitor-Theme-LuminaPlus
