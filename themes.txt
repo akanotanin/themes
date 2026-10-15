@@ -28,3 +28,4 @@ https://github.com/kiusnax/monitor-theme-yydz
 https://github.com/bluesmkun/openlat
 https://github.com/agczsz/monitor-miuix
 https://github.com/Gongsc/Theme-Pixel
+https://github.com/akanotanin/monitor-theme-kanso
